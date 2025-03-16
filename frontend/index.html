@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Registration Page -->
+    <div id="registerPage" class="auth-page">
+      <h2>Register</h2>
+      <input type="text" id="regName" placeholder="Name">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPassword" placeholder="Password">
+      <input type="password" id="regConfirmPassword" placeholder="Confirm Password">
+      <button id="registerButton">Register</button>
+      <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="auth-page hidden">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button id="loginButton">Login</button>
+      <p>Already have an account? <a href="#" id="showRegister">Register</a></p>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="hidden">
+      <h2>Task Manager</h2>
+      <button id="logoutButton">Sign Out</button>
+      <div class="add-task">
+        <input type="text" id="taskInput" placeholder="Task">
+        <select id="taskPriority">
+          <option value="low">Low</option>
+          <option value="high">High</option>
+          <option value="urgent">Urgent</option>
+        </select>
+        <button id="addTaskButton">Add Task</button>
+      </div>
+      <div class="tabs">
+        <button id="allTasksTab">All Tasks</button>
+        <button id="favoriteTasksTab">Favorite Tasks</button>
+        <button id="completedTasksTab">Completed Tasks</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
